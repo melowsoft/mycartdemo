@@ -1,7 +1,9 @@
 language: node_js
-services:
-  - mongodb
 node_js:
-  - "7"
-  - "8"
-  - "9"
+ — “7”
+script:
+ — echo “Deploy!!”
+install:
+ — npm install -g firebase-tools
+after_success:
+ — firebase deploy — project mycartdemo-e6f0b — token $FIREBASE_TOKEN.
